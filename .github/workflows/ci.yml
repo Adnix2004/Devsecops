@@ -23,9 +23,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # 2. Analyse statique du code source Node.js (SAST)
-      - # 2. Analyse statique du code source Node.js (SAST)
       - name: Scan SAST avec Semgrep
-        run: docker run --rm -v "${{ github.workspace }}:/src" returntocorp/semgrep semgrep scan --config=auto
+        uses: semgrep/semgrep-action@v1
         with:
           config: p/javascript
 
