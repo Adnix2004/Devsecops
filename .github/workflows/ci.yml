@@ -24,7 +24,7 @@ jobs:
 
       # 2. Analyse statique du code source Node.js (SAST)
       - name: Scan SAST avec Semgrep
-        uses: semgrep/actions@v1
+        uses: semgrep/semgrep-action@v1
         with:
           config: p/javascript
 
